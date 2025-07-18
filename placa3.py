@@ -4,6 +4,7 @@ from camadafisica import ZyboSerialDriver
 from tcp import Servidor        # copie o arquivo do T2
 from ip import IP               # copie o arquivo do T3
 from slip import CamadaEnlace   # copie o arquivo do T4
+# from servidor import conexao_aceita
 
 ## Implementação da camada de aplicação
 
