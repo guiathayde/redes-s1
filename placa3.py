@@ -4,21 +4,21 @@ from camadafisica import ZyboSerialDriver
 from tcp import Servidor        # copie o arquivo do T2
 from ip import IP               # copie o arquivo do T3
 from slip import CamadaEnlace   # copie o arquivo do T4
-# from servidor import conexao_aceita
+from servidor import conexao_aceita
 
 ## Implementação da camada de aplicação
 
 # Este é um exemplo de um programa que faz eco, ou seja, envia de volta para
 # o cliente tudo que for recebido em uma conexão.
 
-def dados_recebidos(conexao, dados):
-    if dados == b'':
-        conexao.fechar()
-    else:
-        conexao.enviar(dados)   # envia de volta
+# def dados_recebidos(conexao, dados):
+#     if dados == b'':
+#         conexao.fechar()
+#     else:
+#         conexao.enviar(dados)   # envia de volta
 
-def conexao_aceita(conexao):
-    conexao.registrar_recebedor(dados_recebidos)   # usa esse mesmo recebedor para toda conexão aceita
+# def conexao_aceita(conexao):
+#     conexao.registrar_recebedor(dados_recebidos)   # usa esse mesmo recebedor para toda conexão aceita
 
 
 ## Integração com as demais camadas
