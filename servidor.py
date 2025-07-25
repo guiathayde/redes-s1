@@ -170,6 +170,7 @@ def conexao_aceita(conexao):
 
     conexao.registrar_recebedor(wrapper)
 
-servidor = Servidor(6667)
-servidor.registrar_monitor_de_conexoes_aceitas(conexao_aceita)
-asyncio.get_event_loop().run_forever()
+if __name__ == "__main__":
+    servidor = Servidor(6667)
+    servidor.registrar_monitor_de_conexoes_aceitas(conexao_aceita)
+    asyncio.get_event_loop().run_forever()
